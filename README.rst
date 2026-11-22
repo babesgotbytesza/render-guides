@@ -65,7 +65,13 @@ Usage with DDEV
 Usage with local PHP
 ====================
 
+Requires PHP 8.2 or newer (with the curl, dom, libxml and simplexml
+extensions), Composer and ``make``.
+
 ::
+
+    # Install the dependencies (only needed once).
+    composer install
 
     # Renders all files in the `Documentation` and store in `Documentation-GENERATED-temp`.
     make docs
