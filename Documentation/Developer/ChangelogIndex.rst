@@ -9,8 +9,8 @@ Changelog index as JSON
 
 Every manual is rendered with a :ref:`table of contents as JSON
 <table-of-contents-json>`. The TYPO3 Core Changelog provides an additional artifact that
-no other manual does: a machine-readable index of its entries, one file per
-major release, written beside the overview page it belongs to.
+no other manual does: a machine-readable index of its entries, one file per major release, 
+stored alongside the overview page it belongs to.
 
 :file:`Changelog-13.json` is stored alongside :file:`Changelog-13.html` and
 :file:`Changelog-13.md` and lists the same entries the overview page lists:
@@ -47,7 +47,7 @@ major release, written beside the overview page it belongs to.
 ..  rst-class:: dl-parameters
 
 path
-    The entry's file within the manual, without an extension.
+    The entry's file within the manual, without a file extension.
 
 html
     The entry's page, relative to this file: :samp:`path` with :samp:`.html`.
@@ -55,7 +55,7 @@ html
 
 md
     The entry's Markdown, relative to this file: :samp:`path` with :samp:`.md`.
-    Left out when the Changelog was not rendered to Markdown page by page.
+    Omitted when the Changelog was not rendered as individual Markdown pages.
 
 permalink
     The URL that names the entry wherever its file ends up. The Changelog is
@@ -74,7 +74,7 @@ type
     :samp:`important`.
 
 issue
-    The Forge issue the entry documents.
+    The Forge issue documented by the entry.
 
 typo3-version
     The release the entry belongs to, read from its path, for example
