@@ -33,6 +33,22 @@ You can choose whatever is easiest for you:
     the mentioned containers by replacing all :bash:`docker` commands in the
     following steps with :bash:`podman`.
 
+..  _installation-requirements:
+
+Requirements
+============
+
+What you need depends on the method you choose:
+
+-   **Docker** (or Podman): nothing else. The container brings its own PHP and
+    dependencies.
+-   **DDEV**: DDEV and Docker.
+-   **PHP**: PHP 8.2 or newer with the extensions :bash:`curl`, :bash:`dom`,
+    :bash:`libxml` and :bash:`simplexml`, plus Composer and :bash:`make`.
+-   **Node.js** 24.16 or newer (below version 25) is only needed if you want
+    to rebuild the assets of the theme. Rendering documentation does not
+    require it.
+
 ..  _setup-docker:
 
 Docker
@@ -202,6 +218,13 @@ You can run these commands locally:
 
     composer install
     make docs
+
+..  note::
+
+    The Docker container runs with a PHP memory limit of 4 GB. A local run with
+    :bash:`make docs` uses 1024 MB by default, which large manuals may exceed.
+    You can raise it with the :bash:`PHP_ARGS` variable, for example
+    :bash:`make PHP_ARGS="-d memory_limit=2G -d date.timezone=UTC" docs`.
 
 The provided Symfony commands can be executed via:
 
